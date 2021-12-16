@@ -6,9 +6,12 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
+#import <UserNotifications/UserNotifications.h>
+#import <CoreLocation/CLLocationManager.h>
+#import "ViewController.h"
+@interface AppDelegate ()<UNUserNotificationCenterDelegate,CLLocationManagerDelegate>
+@property (nonatomic, assign) UIBackgroundTaskIdentifier bgTask;
+@property(nonatomic,strong)CLLocationManager *locationManager;
 @end
 
 @implementation AppDelegate
@@ -16,25 +19,78 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window.rootViewController = [ViewController new];
+    [self setNotificationCenter];
     return YES;
 }
+- (void)setNotificationCenter{
+    if (@available(iOS 10.0, *)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
 
+        [center getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
+                   for (UNNotificationRequest *req in requests){
+                       NSLog(@"存在的ID:%@\n",req.identifier);
+//                        [center removePendingNotificationRequestsWithIdentifiers:@[req.identifier]];
+                   }
+        }];
 
-#pragma mark - UISceneSession lifecycle
+//           [center removePendingNotificationRequestsWithIdentifiers:@[noticeId]];
 
-
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        }];
+        center.delegate = self;
+        [center removeAllPendingNotificationRequests];
+    }
+}
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    [self receiveNotification];
+}
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+API_AVAILABLE(ios(10.0)){
+    [self receiveNotification];
 }
 
-
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler
+API_AVAILABLE(ios(10.0)){
+    [self receiveNotification];
 }
 
+- (void)receiveNotification{
+
+//    [[NSNotificationCenter defaultCenter]postNotificationName:@"receiveNotification" object:nil];
+}
+
+- (void)startBackgroundTask{
+    UIApplication* app = [UIApplication sharedApplication];
+    __block  UIBackgroundTaskIdentifier  bgTask ;
+    bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+        //这里延迟的系统时间结束
+        NSLog(@"backgroundTimeRemaining======%f",app.backgroundTimeRemaining);
+    }];
+}
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+//    [self startBackgroundTask];
+//    [self startLocationUpdate];
+}
+- (void)startLocationUpdate{
+    if(!_locationManager){
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.allowsBackgroundLocationUpdates = YES;
+        _locationManager.delegate = self;
+        [_locationManager requestAlwaysAuthorization];
+        [_locationManager startUpdatingLocation];
+    }
+}
+
+/** 获取到新的位置信息时调用*/
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+//  NSLog(@"定位到了%@",locations);
+}
+/** 不能获取位置信息时调用*/
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+  NSLog(@"获取定位失败%@",error.description);
+}
 
 @end

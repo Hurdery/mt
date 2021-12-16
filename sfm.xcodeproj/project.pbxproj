@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		80D4F3FD2769F12E008DA637 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F3FC2769F12E008DA637 /* AppDelegate.m */; };
-		80D4F4002769F12E008DA637 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F3FF2769F12E008DA637 /* SceneDelegate.m */; };
 		80D4F4032769F12E008DA637 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F4022769F12E008DA637 /* ViewController.m */; };
 		80D4F4062769F12E008DA637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D4F4042769F12E008DA637 /* Main.storyboard */; };
 		80D4F4082769F130008DA637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D4F4072769F130008DA637 /* Assets.xcassets */; };
 		80D4F40B2769F130008DA637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D4F4092769F130008DA637 /* LaunchScreen.storyboard */; };
 		80D4F40E2769F130008DA637 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F40D2769F130008DA637 /* main.m */; };
+		80D4F44F276B1F23008DA637 /* BRResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F435276B1F23008DA637 /* BRResultModel.m */; };
+		80D4F450276B1F23008DA637 /* BRStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F438276B1F23008DA637 /* BRStringPickerView.m */; };
+		80D4F451276B1F23008DA637 /* BRDatePickerView+BR.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F43B276B1F23008DA637 /* BRDatePickerView+BR.m */; };
+		80D4F452276B1F23008DA637 /* NSDate+BRPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F43D276B1F23008DA637 /* NSDate+BRPickerView.m */; };
+		80D4F453276B1F23008DA637 /* BRDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F43E276B1F23008DA637 /* BRDatePickerView.m */; };
+		80D4F454276B1F23008DA637 /* BRPickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 80D4F444276B1F23008DA637 /* BRPickerView.bundle */; };
+		80D4F455276B1F23008DA637 /* BRPickerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F445276B1F23008DA637 /* BRPickerStyle.m */; };
+		80D4F456276B1F23008DA637 /* BRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F446276B1F23008DA637 /* BRBaseView.m */; };
+		80D4F457276B1F23008DA637 /* NSBundle+BRPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F447276B1F23008DA637 /* NSBundle+BRPickerView.m */; };
+		80D4F458276B1F23008DA637 /* BRAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F44B276B1F23008DA637 /* BRAddressModel.m */; };
+		80D4F459276B1F23008DA637 /* BRAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D4F44E276B1F23008DA637 /* BRAddressPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		80D4F3F82769F12E008DA637 /* sfm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sfm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D4F3FB2769F12E008DA637 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80D4F3FC2769F12E008DA637 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		80D4F3FE2769F12E008DA637 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		80D4F3FF2769F12E008DA637 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		80D4F4012769F12E008DA637 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		80D4F4022769F12E008DA637 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		80D4F4052769F12E008DA637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +37,29 @@
 		80D4F40A2769F130008DA637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80D4F40C2769F130008DA637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D4F40D2769F130008DA637 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80D4F435276B1F23008DA637 /* BRResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRResultModel.m; sourceTree = "<group>"; };
+		80D4F436276B1F23008DA637 /* BRStringPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStringPickerView.h; sourceTree = "<group>"; };
+		80D4F437276B1F23008DA637 /* BRResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRResultModel.h; sourceTree = "<group>"; };
+		80D4F438276B1F23008DA637 /* BRStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStringPickerView.m; sourceTree = "<group>"; };
+		80D4F439276B1F23008DA637 /* BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerView.h; sourceTree = "<group>"; };
+		80D4F43B276B1F23008DA637 /* BRDatePickerView+BR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BRDatePickerView+BR.m"; sourceTree = "<group>"; };
+		80D4F43C276B1F23008DA637 /* BRDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDatePickerView.h; sourceTree = "<group>"; };
+		80D4F43D276B1F23008DA637 /* NSDate+BRPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BRPickerView.m"; sourceTree = "<group>"; };
+		80D4F43E276B1F23008DA637 /* BRDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDatePickerView.m; sourceTree = "<group>"; };
+		80D4F43F276B1F23008DA637 /* BRDatePickerView+BR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BRDatePickerView+BR.h"; sourceTree = "<group>"; };
+		80D4F440276B1F23008DA637 /* NSDate+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BRPickerView.h"; sourceTree = "<group>"; };
+		80D4F442276B1F23008DA637 /* NSBundle+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+BRPickerView.h"; sourceTree = "<group>"; };
+		80D4F443276B1F23008DA637 /* BRPickerViewMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerViewMacro.h; sourceTree = "<group>"; };
+		80D4F444276B1F23008DA637 /* BRPickerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BRPickerView.bundle; sourceTree = "<group>"; };
+		80D4F445276B1F23008DA637 /* BRPickerStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPickerStyle.m; sourceTree = "<group>"; };
+		80D4F446276B1F23008DA637 /* BRBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRBaseView.m; sourceTree = "<group>"; };
+		80D4F447276B1F23008DA637 /* NSBundle+BRPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+BRPickerView.m"; sourceTree = "<group>"; };
+		80D4F448276B1F23008DA637 /* BRBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBaseView.h; sourceTree = "<group>"; };
+		80D4F449276B1F23008DA637 /* BRPickerStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerStyle.h; sourceTree = "<group>"; };
+		80D4F44B276B1F23008DA637 /* BRAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressModel.m; sourceTree = "<group>"; };
+		80D4F44C276B1F23008DA637 /* BRAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressPickerView.h; sourceTree = "<group>"; };
+		80D4F44D276B1F23008DA637 /* BRAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressModel.h; sourceTree = "<group>"; };
+		80D4F44E276B1F23008DA637 /* BRAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressPickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +92,9 @@
 		80D4F3FA2769F12E008DA637 /* sfm */ = {
 			isa = PBXGroup;
 			children = (
+				80D4F433276B1F23008DA637 /* BRPickerView */,
 				80D4F3FB2769F12E008DA637 /* AppDelegate.h */,
 				80D4F3FC2769F12E008DA637 /* AppDelegate.m */,
-				80D4F3FE2769F12E008DA637 /* SceneDelegate.h */,
-				80D4F3FF2769F12E008DA637 /* SceneDelegate.m */,
 				80D4F4012769F12E008DA637 /* ViewController.h */,
 				80D4F4022769F12E008DA637 /* ViewController.m */,
 				80D4F4042769F12E008DA637 /* Main.storyboard */,
@@ -74,6 +104,68 @@
 				80D4F40D2769F130008DA637 /* main.m */,
 			);
 			path = sfm;
+			sourceTree = "<group>";
+		};
+		80D4F433276B1F23008DA637 /* BRPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				80D4F434276B1F23008DA637 /* StringPickerView */,
+				80D4F439276B1F23008DA637 /* BRPickerView.h */,
+				80D4F43A276B1F23008DA637 /* DatePickerView */,
+				80D4F441276B1F23008DA637 /* Base */,
+				80D4F44A276B1F23008DA637 /* AddressPickerView */,
+			);
+			path = BRPickerView;
+			sourceTree = "<group>";
+		};
+		80D4F434276B1F23008DA637 /* StringPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				80D4F435276B1F23008DA637 /* BRResultModel.m */,
+				80D4F436276B1F23008DA637 /* BRStringPickerView.h */,
+				80D4F437276B1F23008DA637 /* BRResultModel.h */,
+				80D4F438276B1F23008DA637 /* BRStringPickerView.m */,
+			);
+			path = StringPickerView;
+			sourceTree = "<group>";
+		};
+		80D4F43A276B1F23008DA637 /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				80D4F43B276B1F23008DA637 /* BRDatePickerView+BR.m */,
+				80D4F43C276B1F23008DA637 /* BRDatePickerView.h */,
+				80D4F43D276B1F23008DA637 /* NSDate+BRPickerView.m */,
+				80D4F43E276B1F23008DA637 /* BRDatePickerView.m */,
+				80D4F43F276B1F23008DA637 /* BRDatePickerView+BR.h */,
+				80D4F440276B1F23008DA637 /* NSDate+BRPickerView.h */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		80D4F441276B1F23008DA637 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				80D4F442276B1F23008DA637 /* NSBundle+BRPickerView.h */,
+				80D4F443276B1F23008DA637 /* BRPickerViewMacro.h */,
+				80D4F444276B1F23008DA637 /* BRPickerView.bundle */,
+				80D4F445276B1F23008DA637 /* BRPickerStyle.m */,
+				80D4F446276B1F23008DA637 /* BRBaseView.m */,
+				80D4F447276B1F23008DA637 /* NSBundle+BRPickerView.m */,
+				80D4F448276B1F23008DA637 /* BRBaseView.h */,
+				80D4F449276B1F23008DA637 /* BRPickerStyle.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		80D4F44A276B1F23008DA637 /* AddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				80D4F44B276B1F23008DA637 /* BRAddressModel.m */,
+				80D4F44C276B1F23008DA637 /* BRAddressPickerView.h */,
+				80D4F44D276B1F23008DA637 /* BRAddressModel.h */,
+				80D4F44E276B1F23008DA637 /* BRAddressPickerView.m */,
+			);
+			path = AddressPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D4F454276B1F23008DA637 /* BRPickerView.bundle in Resources */,
 				80D4F40B2769F130008DA637 /* LaunchScreen.storyboard in Resources */,
 				80D4F4082769F130008DA637 /* Assets.xcassets in Resources */,
 				80D4F4062769F12E008DA637 /* Main.storyboard in Resources */,
@@ -145,10 +238,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D4F453276B1F23008DA637 /* BRDatePickerView.m in Sources */,
+				80D4F456276B1F23008DA637 /* BRBaseView.m in Sources */,
+				80D4F451276B1F23008DA637 /* BRDatePickerView+BR.m in Sources */,
+				80D4F452276B1F23008DA637 /* NSDate+BRPickerView.m in Sources */,
 				80D4F4032769F12E008DA637 /* ViewController.m in Sources */,
 				80D4F3FD2769F12E008DA637 /* AppDelegate.m in Sources */,
+				80D4F458276B1F23008DA637 /* BRAddressModel.m in Sources */,
+				80D4F457276B1F23008DA637 /* NSBundle+BRPickerView.m in Sources */,
+				80D4F450276B1F23008DA637 /* BRStringPickerView.m in Sources */,
+				80D4F459276B1F23008DA637 /* BRAddressPickerView.m in Sources */,
+				80D4F455276B1F23008DA637 /* BRPickerStyle.m in Sources */,
+				80D4F44F276B1F23008DA637 /* BRResultModel.m in Sources */,
 				80D4F40E2769F130008DA637 /* main.m in Sources */,
-				80D4F4002769F12E008DA637 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
