@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window.rootViewController = [ViewController new];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[ViewController new]];
     [self setNotificationCenter];
     return YES;
 }
@@ -29,22 +29,18 @@
 
         [center getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
                    for (UNNotificationRequest *req in requests){
-                       NSLog(@"存在的ID:%@\n",req.identifier);
+//                       NSLog(@"存在的ID:%@\n",req.identifier);
 //                        [center removePendingNotificationRequestsWithIdentifiers:@[req.identifier]];
                    }
         }];
 
-//           [center removePendingNotificationRequestsWithIdentifiers:@[noticeId]];
-
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
         }];
         center.delegate = self;
-        [center removeAllPendingNotificationRequests];
+//        [center removeAllPendingNotificationRequests];
     }
 }
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-    [self receiveNotification];
-}
+
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
 API_AVAILABLE(ios(10.0)){
     [self receiveNotification];
@@ -72,6 +68,10 @@ API_AVAILABLE(ios(10.0)){
 //    [self startBackgroundTask];
 //    [self startLocationUpdate];
 }
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"reloadList" object:nil];
+}
+
 - (void)startLocationUpdate{
     if(!_locationManager){
         _locationManager = [[CLLocationManager alloc] init];
